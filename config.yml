@@ -1,0 +1,42 @@
+# Số bệnh tối đa đồng thời trên mỗi người chơi
+max-diseases: 2
+# Sau khi khỏi bệnh nào thì miễn nhiễm bệnh đó bao nhiêu giây
+immunity-seconds: 180
+# Biến cố (ăn đồ sống, thu hoạch...) chỉ tính trong khoảng thời gian này (giây)
+event-window-seconds: 120
+# Chết thì hết bệnh
+cure-on-death: true
+# Dùng khi không đọc được mùa từ plugin Seasons (SPRING/SUMMER/AUTUMN/WINTER)
+fallback-season: SPRING
+
+# ---------- MỚI 1.1.0 ----------
+# Hiện tên bệnh + thời gian còn lại trên thanh actionbar
+hud: true
+
+# Bệnh nặng dần: quá nửa thời gian mà chưa chữa thì triệu chứng tăng 1 cấp
+worsen:
+  enabled: true
+
+# Bệnh lây giữa người chơi đứng gần nhau (chỉ với bệnh có contagious: true)
+contagion:
+  enabled: true
+  radius: 3.0
+  # xác suất lây mỗi 5 giây cho mỗi người đứng gần
+  chance: 0.12
+
+# Khẩu trang (mũ da trắng tên "Khẩu trang") - chặn lây bệnh cả hai chiều
+mask:
+  recipe: true      # công thức: dây - len trắng - dây (1 hàng ngang)
+
+# Thầy lang: chuột phải dân làng Mục sư để chữa bệnh có cách chữa DOCTOR
+doctor:
+  enabled: true
+  cost-emeralds: 2
+
+# Dịch bệnh ngẫu nhiên: tăng nguy cơ một bệnh trong mùa + bossbar cảnh báo
+epidemic:
+  enabled: true
+  check-minutes: 30
+  chance: 0.25
+  duration-minutes: 15
+  chance-multiplier: 2.5
